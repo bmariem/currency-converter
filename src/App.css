@@ -1,0 +1,104 @@
+.App {
+  width: 1024px;
+  height: 100%;
+  margin: auto;
+}
+
+@media (max-width: 1024) {
+  .App {
+    width: auto;
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    width: auto;
+  }
+}
+
+/* HEADER COMPONENT */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 30px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 1024) {
+  header h1 {
+    font-size: 40px;
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 30px;
+    margin: 30px 0;
+  }
+}
+
+/* MAIN COMPONENT */
+main {
+  padding: 30px 0;
+}
+
+.converter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.emoji,
+.converter span {
+  font-size: 48px;
+  line-height: 59px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.emoji {
+  margin: 10px auto;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .emoji {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+input,
+select {
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 24px;
+  margin: 10px 20px;
+}
+
+input {
+  width: 40%;
+}
+
+@media (max-width: 480px) {
+  input {
+    width: 70%;
+    margin: 10px;
+  }
+}
+
+select {
+  margin-left: 10px;
+}
