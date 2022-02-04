@@ -1,36 +1,36 @@
 import React, { useState } from "react";
 
 // DATA
-import rates from "../Assets/currency.js";
+import rates from "../assets/currency.js";
 
 const Main = () => {
   // STATES
-  const [cur1, setCur1] = useState(0);
-  const [cur2, setCur2] = useState(0);
+  const [currency1, setCurrency1] = useState(0);
+  const [currency2, setCurrency2] = useState(0);
 
   // FUNCTIONS
-  const convertCur1 = (event) => {
-    setCur1(event.target.value);
+  const convertCurrency1 = (event) => {
+    setCurrency1(event.target.value);
   };
 
-  const convertCur2 = (event) => {
-    setCur2(event.target.value);
+  const convertCurrency2 = (event) => {
+    setCurrency2(event.target.value);
   };
 
   const convertUsdToEur = () => {
-    const result = (Number(cur2) * rates.EUR) / rates.USD;
-    setCur1(result);
+    const result = (Number(currency2) * rates.EUR) / rates.USD;
+    setCurrency1(result);
   };
 
   const convertEurToUsd = () => {
-    const result = (Number(cur1) * rates.USD) / rates.EUR;
-    setCur2(result);
+    const result = (Number(currency1) * rates.USD) / rates.EUR;
+    setCurrency2(result);
   };
 
   return (
     <main>
       <div className="converter">
-        <input type="number" value={cur1} onChange={convertCur1} />
+        <input type="number" value={currency1} onChange={convertCurrency1} />
         <span>€</span>
       </div>
       <div className="emoji">
@@ -43,7 +43,7 @@ const Main = () => {
       </div>
 
       <div className="converter">
-        <input type="number" value={cur2} onChange={convertCur2} />
+        <input type="number" value={currency2} onChange={convertCurrency2} />
         <span>$</span>
       </div>
     </main>
